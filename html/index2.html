@@ -5,49 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>자바스크립트 DOM</title>
-  <script src="../js/jquery-3.3.1.min.js"></script>
   <!-- External 방식(3) -->
-  <!-- <link href="../css/style.css" rel="stylesheet"> -->
+  <link href="../css/w3.css" rel="stylesheet">
+  <script src="../js/jquery-3.3.1.min.js"></script>
   <style>
   /* Internal 방식(2) */
-  .box {background-color:#f00; width:200px; height:200px;}
-  div {background-color:#ff0; width:200px; height:200px;}
-  #box1 {background-color:#00f; width:200px; height:200px;}
-  /* .box {background-color:#00f;}
-  #box1 {width:200px; height:200px; 
-  background-color:rgb(6, 117, 182);} */
+  div {background-color:#ff0;}
+  #box1 {background-color:#ccc; width:200px;}
+  .box {background-color:#00f;}
   </style>
 </head>
 <body>
   <!-- Inline 방식(1) -->
-  <div class="box" id="box1" style="background-color:#f93"></div>
+  <button class="w3-button w3-indigo" id="bt1">확인</button>
+  <button class="w3-button w3-red" id="bt2">초기화</button>
+  <div class="box" id="box1">
+    
+  </div>
   
   <script>
-
-    // const log = console.log;
-    /* const log = console.log; */
     const log = console.log;
-
+    var bt1 = document.getElementById("bt1");
+    var bt2 = document.getElementById("bt2");
     var box1 = document.getElementById("box1");
-
-    box1.addEventListener("click", box1Click);
-    
-    function box1Click(){
-      box1.style.backgroundColor = "blue";
-    }
-
-    box1.addEventListener("click", function (){
-      box1.style.backgroundColor = "blue";
+    bt1.addEventListener("click", function(){
+      var html = box1.innerHTML;     
+      box1.innerHTML = html + '<div>★</div>';
     });
-    
-    
-
-
-
-
-    /* document.getElementById("box1").style.width = "200px";
-    document.getElementById("box1").style.height = "200px";
-    document.getElementById("box1").style.backgroundColor = "#f00"; */
-    </script>
+    bt2.addEventListener("click", function(){
+      box1.innerHTML = '';
+    });
+  </script>
 </body>
 </html>
