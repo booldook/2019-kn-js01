@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,35 @@
   <title>자바스크립트 01</title>
   <script src="../js/jquery-3.3.1.min.js"></script>
 </head>
+
 <body>
+  <div id="box"></div>
   <script>
-  var a = 2;
-  var b = 3;
-  var c = a * b;
-  //alert("안녕하세요.");
-  //console.log(confirm("안녕하세요."));
-  console.log("123"+"456", 123);
-  console.log(fn(prompt("값을 입력하세요.")));
-  function fn(x){
-    return Number(x) * Number(x);
-  }
+    const log = console.log;
+    var html;
+    html = "<div></div>";
+    html = "<ul><li></li></ul>";
+    var str = "가나다";
+    var idx = 12;
+    var a = 2;
+    var b = 3;
+    var c = a * b;
+    //alert("안녕하세요.");
+    //log(confirm("안녕하세요."));
+    log("123" + "456", 123);
+    //log(fn(prompt("값을 입력하세요.")));
+
+    function fn(x) {
+      return Number(x) * Number(x);
+    }
+
+    var fn2 = function(x) {
+      return Number(x) * Number(x);
+    }
+
+    log(fn(25));
+    log(fn2(25));
   </script>
 </body>
+
 </html>
