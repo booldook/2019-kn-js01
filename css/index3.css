@@ -1,0 +1,5 @@
+html, body {font-size: 16px;}
+.bt-wrap {padding: 1rem; text-align: center;}
+#box-wrap {width:90%; margin:auto;}
+#box-wrap > div {width:50px; height:50px; float:left; background-color: aqua; border:1px solid #00f;}
+#box-wrap > div:hover {transition-duration:1s; opacity:0;}
