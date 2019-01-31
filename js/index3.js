@@ -11,7 +11,7 @@ $("#bt-ok").click(function(){
   }
 });
 
-$("#bt-cancel").click(function(){
+$("#bt-init").click(function(){
   //$("#box-wrap").html('');
   $("#box-wrap").empty();
 });
