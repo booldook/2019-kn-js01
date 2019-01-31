@@ -25,15 +25,25 @@
   
   <script>
     const log = console.log;
+    
+    /* var bt0 = document.getElementsByClassName("box");
     var bt1 = document.getElementById("bt1");
     var bt2 = document.getElementById("bt2");
     var box1 = document.getElementById("box1");
     bt1.addEventListener("click", function(){
       var html = box1.innerHTML;     
-      box1.innerHTML = html + '<div>★</div>';
+      box1.innerHTML = html + <div>★</div>;
     });
     bt2.addEventListener("click", function(){
       box1.innerHTML = '';
+    }); */
+
+    $("#bt1").on("click", function(){
+      var html = $("#box1").html();
+      $("#box1").html(html+'<div>★</div>');
+    });
+    $("#bt2").click(function(){
+      $("#box1").html('');
     });
   </script>
 </body>
