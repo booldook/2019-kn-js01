@@ -13,13 +13,13 @@
 
 <body>
 
-  <form action="" name="" id="" method="">
+  <form action="join_ok.php" name="" id="" method="">
     <div class="wrap">
       <div class="w3-panel w3-indigo w3-padding">회원가입</div>
       <div class="form-line clear">
-        <div class="form-label">이름</div>
+        <div class="form-label">아이디</div>
         <div class="form-cont">
-          <input type="text" name="uname" placeholder="이름">
+          <input type="text" name="uid" placeholder="아이디">
         </div>
       </div>
       <div class="form-line clear">
@@ -32,6 +32,55 @@
         <div class="form-label">패스워드 확인</div>
         <div class="form-cont">
           <input type="password" name="pw2" placeholder="비밀번호 확인">
+        </div>
+      </div>
+      <div class="form-line clear">
+        <div class="form-label">이름</div>
+        <div class="form-cont">
+          <input type="text" name="uname" placeholder="이름">
+        </div>
+      </div>
+      <div class="form-line clear">
+        <div class="form-label">성별</div>
+        <div class="form-cont">
+          <input type="radio" name="gender" id="gender-m" value="M" checked>
+          <label for="gender-m">남자</label>
+          <input type="radio" name="gender" id="gender-f" value="F" style="margin-left:30px;">
+          <label for="gender-f">여자</label>
+        </div>
+      </div>
+      <div class="form-line clear">
+        <div class="form-label">이메일</div>
+        <div class="form-cont">
+          <input type="text" name="email1" placeholder="이메일"> @
+          <select name="email2">
+            <option value="">직접입력</option>
+            <option value="gmail.com">지메일</option>
+            <option value="naver.com">네이버</option>
+            <option value="daum.net">다음</option>
+            <option value="nate.com">네이트</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-line clear">
+        <div class="form-label">전화번호</div>
+        <div class="form-cont">
+          <select name="tel1">
+            <option value="010">010</option>
+            <option value="011">011</option>
+            <option value="016">016</option>
+            <option value="017">017</option>
+            <option value="018">018</option>
+            <option value="019">019</option>
+          </select> -
+          <input type="text" name="tel2" maxlength="4"> -
+          <input type="text" name="tel3" maxlength="4">
+        </div>
+      </div>
+      <div class="form-line clear">
+        <div class="form-label">전화번호</div>
+        <div class="form-cont">
+
         </div>
       </div>
     </div>
