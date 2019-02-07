@@ -12,8 +12,12 @@
 </head>
 
 <body>
-
-  <form action="join_ok.php" name="" id="" method="">
+  <!--
+    input : text, password, radio, checkbox, (버튼: button, reset, submit)
+    select > option
+    textarea
+  -->
+  <form action="join_ok.php" name="join-form" id="join-form" method="post">
     <div class="wrap">
       <div class="w3-panel w3-indigo w3-padding">회원가입</div>
       <div class="form-line clear">
@@ -94,9 +98,15 @@
           <textarea name="mystory" rows="10" class="w3-input w3-border"></textarea>
         </div>
       </div>
+      <div class="bts">
+        <!-- <input type="button" value="임시버튼">
+        <input type="reset" value="다시작성">
+        <input type="submit" value="가입"> -->
+        <button type="reset" class="w3-button w3-red">다시작성</button>
+        <button type="button" class="w3-button w3-indigo" onclick="">가입</button>
+      </div>
     </div>
   </form>
-
   <script src="../js/index4.js"></script>
 </body>
 
