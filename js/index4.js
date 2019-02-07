@@ -76,6 +76,18 @@ function sendForm() {
     uname.focus();
     return;
   }
+  if(email1.value == "") {
+    alert("이메일을 입력하세요.");
+    email1.focus();
+    return;
+  }
+  if(email2.value == "") {
+    alert("이메일을 입력하세요.");
+    email2.focus();
+    return;
+  }
+  f.email.value = email1.value + "@" + email2.value;
+  f.tel.value = tel1.value + "-" + tel2.value + "-" + tel3.value;
   f.submit();
   //log(uid.value.length);
 }
@@ -96,4 +108,17 @@ $("#email3").on("change", function(){
   //document.querySelector("input[name='email2']").value = document.querySelector("#email3").value;
 
   $("input[name='email2']").val($("#email3").val());
+  if($("#email3").val() == "") {
+    $("input[name='email2']").focus();
+  }
 });
+
+$(".number").on("keyup", function(){
+  log(  $(this).val() );
+  var exp = /^[0-9]*$/;
+  var val = $(this).val();
+  if(!exp.test(val)) {
+    $(this).val("");
+  }
+});
+
