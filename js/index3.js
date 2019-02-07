@@ -15,7 +15,7 @@ $("#bt-init").click(function(){
   //$("#box-wrap").html('');
   $("#box-wrap").empty();
 });
-*/
+*/ 
 
 var btOk = document.getElementById("bt-ok");
 var btInit = document.getElementById("bt-init");

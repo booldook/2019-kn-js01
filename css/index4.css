@@ -1,0 +1,6 @@
+@import "base.css";
+
+.wrap {width:100%; margin:auto; max-width:1200px;}
+.form-line {border-bottom:1px solid #ccc; padding:0;}
+.form-label {background-color: #f1f1f1; color:#666; float:left; width:30%; padding:0.7rem; margin:0;}
+.form-cont {color:#333; float:left; width:70%; padding:0.5rem; }
