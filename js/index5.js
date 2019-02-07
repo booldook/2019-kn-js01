@@ -50,3 +50,33 @@ log(kilsun);
 log(kilsun.name);
 kilsun.eat("회");
 
+/*
+jQUery를 쓰는 이유
+1. 선택자가 편하다...
+2. animate, fadeIn, fadeOut, slideDown, slideUp, hide, show
+*/
+
+/* $("#box1").click(function(){
+  $(this).animate({"width":"100%", "height":"100%"}, 2000);
+}); */
+
+$("#box1").click(function(){
+  $(this).animate({"width":"100%"}, 1000, function(){
+    $(this).animate({"height":"100%"}, 500);
+  });
+});
+
+/*
+var n = 0;
+var interval = setInterval(function(){
+  log(n++);
+}, 500);
+*/
+
+$("#music > li").each(function(){
+  var li = $(this);
+  var interval = setInterval(function(){
+    var per = Math.floor(Math.random()*70)+30;
+    li.css({"height":per+"%"});
+  }, 100);
+});

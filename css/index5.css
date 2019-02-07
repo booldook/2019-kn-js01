@@ -1,4 +1,13 @@
 @import "base.css";
 
 .wrap {width:100%; margin:auto; max-width:1200px;}
+#box1 {width:200px; height:200px; background-color:#f00; 
+  border:10px solid #f60;}
 
+#music {margin:100px 0 0 100px; width:100px; height:100px; position:relative;}
+#music > li {width:20%; position:absolute; bottom:0; background-color:#f00;}
+#music > li:nth-child(1) {height:20%; left:0;}
+#music > li:nth-child(2) {height:40%; left:20%;}
+#music > li:nth-child(3) {height:10%; left:40%;}
+#music > li:nth-child(4) {height:60%; left:60%;}
+#music > li:nth-child(5) {height:80%; left:80%;}
