@@ -11,3 +11,6 @@
 #page4 {background-color: darkorange;}
 #page5 {background-color: darksalmon;}
 
+.box {box-sizing: border-box; width:300px; border:10px solid #f00; padding:10px; height:100px; font-size:1rem;}
+.box2 {box-sizing: content-box; width:300px; border:10px solid #f00; padding:10px; height:100px; font-size:1rem; margin:20px;}
+
