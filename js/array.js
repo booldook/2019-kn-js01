@@ -35,6 +35,19 @@ for(var i in box) {
   });
 }
 
+for(var i=0; i<100; i++) {
+  $("#boxes").append('<div class="box">'+i+'번</div>');
+}
+$(".box").click(function(){
+  $(this).css({
+    "width": "100px",
+    "height": "100px",
+    "font-size": "50px"
+  });
+});
+
+
+
 
 
 // void 형 - 리턴값이 없는 함수

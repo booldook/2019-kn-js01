@@ -92,19 +92,25 @@ var Equalizer = (function(){
     this.parent.append(html);
     this.ul = this.parent.children("ul");
     this.li = this.ul.children("li");
+    console.log(this.li);
+    console.log(this.li[3]);
+    console.log(this.li.eq(3));
+    console.log(this.li.eq(3)[0]);   
     this.ul.css({
       "width":this.size+"px",
       "height":this.size+"px",
       "position":"relative",
     });
-    this.li.css({
-      "background-color":this.bgColor, 
-      "width":"20%",
-      "height":"20%",
-      "position":"absolute",
-      "bottom":"0"
+    this.li.each(function(i){
+      $(this).css({
+        "background-color":obj.bgColor, 
+        "width":"20%",
+        "height":"20%",
+        "left":(i*20)+"%",
+        "position":"absolute",
+        "bottom":"0"
+      });
     });
-    //this.li[0].style.backgroundColor = this.bgColor;
   }
   return Equalizer;
 }());
