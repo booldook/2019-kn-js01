@@ -4,10 +4,3 @@
 #box1 {width:200px; height:200px; background-color:#f00; 
   border:10px solid #f60;}
 
-#music {margin:100px 0 0 100px; width:100px; height:100px; position:relative;}
-#music > li {width:20%; position:absolute; bottom:0; background-color:#f00;}
-#music > li:nth-child(1) {left:0;}
-#music > li:nth-child(2) {left:20%;}
-#music > li:nth-child(3) {left:40%;}
-#music > li:nth-child(4) {left:60%;}
-#music > li:nth-child(5) {left:80%;}
