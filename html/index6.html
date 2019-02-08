@@ -15,13 +15,42 @@
 <body>
   <!-- ul.navs>li.logo{LOGO}+li.nav*4{$} -->
   <ul class="navs clear w3-light-gray">
-    <li class="logo fl w3-button w3-orange">LOGO</li>
-    <li class="nav fr w3-button w3-black">page4</li>
-    <li class="nav fr w3-button w3-black">page3</li>
-    <li class="nav fr w3-button w3-black">page2</li>
-    <li class="nav fr w3-button w3-black">page1</li>
+    <li class="logo fl w3-button w3-orange" data-page="0">LOGO</li>
+    <li class="nav fr w3-button w3-black" data-page="4">
+      page4
+      <ul class="subs">
+        <li class="sub">Sub1</li>
+        <li class="sub">Sub2</li>
+        <li class="sub">Sub3</li>
+      </ul>
+    </li>
+    <li class="nav fr w3-button w3-black" data-page="3">
+      page3
+      <ul class="subs">
+        <li class="sub">Sub1</li>
+        <li class="sub">Sub2</li>
+        <li class="sub">Sub3</li>
+      </ul>
+    </li>
+    <li class="nav fr w3-button w3-black" data-page="2">
+      page2
+      <ul class="subs">
+        <li class="sub">Sub1</li>
+        <li class="sub">Sub2</li>
+        <li class="sub">Sub3</li>
+      </ul>
+    </li>
+    <li class="nav fr w3-button w3-black" data-page="1">
+      page1
+      <ul class="subs">
+        <li class="sub">Sub1</li>
+        <li class="sub">Sub2</li>
+        <li class="sub">Sub3</li>
+      </ul>
+    </li>
   </ul>
   <!-- div.page#page${PAGE$}*5 -->
+  <div class="page" id="page0">PAGE0</div>
   <div class="page" id="page1">PAGE1
     <div class="box">box-sizing:border-box</div>
     <div class="box2">box-sizing:content-box</div>
@@ -29,7 +58,6 @@
   <div class="page" id="page2">PAGE2</div>
   <div class="page" id="page3">PAGE3</div>
   <div class="page" id="page4">PAGE4</div>
-  <div class="page" id="page5">PAGE5</div>
   <script src="../js/index6.js"></script>
 </body>
 

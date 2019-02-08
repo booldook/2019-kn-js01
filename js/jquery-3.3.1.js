@@ -60,14 +60,17 @@ var div = $(".div");
 - fadeIn(1000), fadeOut(1000), fadeToggle(1000)
 - show(1000), hide(1000), toggle(1000)
 - slideUp(1000), slideDown(1000), slideToggle(1000);
+
+4. Dimensions
 - width()/innerWidth()/outerWidth(true)
 - height()/innerHeight()/outerHeight(true)
 - position()
 - offset()
+- scrollTop();
 https://www.w3schools.com/jquery/jquery_dimensions.asp
 - 실습 index6.js 참조
 
-4. Ajax
+5. Ajax
 - 실습 index7.js 참조
 */
 
