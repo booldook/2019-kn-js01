@@ -80,48 +80,21 @@ $("#music > li").each(function(){
   }, 100);
 });
 
-var Equalizer = (function(){
-  function Equalizer(parent, bgColor, size){
-    var obj = this;
-    var html = '<ul>';
-    for(var i=1; i<=5; i++) html += '<li></li>';
-    html += '</ul>';
-    this.parent = $(parent);
-    this.bgColor = bgColor;
-    this.size = size;
-    this.parent.append(html);
-    this.ul = this.parent.children("ul");
-    this.li = this.ul.children("li");
-    console.log(this.li);
-    console.log(this.li[3]);
-    console.log(this.li.eq(3));
-    console.log(this.li.eq(3)[0]);   
-    this.ul.css({
-      "width":this.size+"px",
-      "height":this.size+"px",
-      "position":"relative",
-    });
-    this.li.each(function(i){
-      $(this).css({
-        "background-color":obj.bgColor, 
-        "width":"20%",
-        "height":"20%",
-        "left":(i*20)+"%",
-        "position":"absolute",
-        "bottom":"0"
-      });
-    });
-  }
-  return Equalizer;
-}());
-
-
 var eq = new Equalizer($(".eq"), "#f90", 200);
+var eq2 = new Equalizer($(".eq2"), "#09f", 500);
 
-{/* <ul id="music" class="clear">
+
+/* <ul id="music" class="clear">
     <li></li>
     <li></li>
     <li></li>
     <li></li>
     <li></li>
-  </ul> */}
+  </ul> */
+
+/*
+Math.floor(90.6)  //90  - 소수점 이하 버림
+Math.ceil(90.2)   //91  - 소수점 이하 올림
+Math.round(90.2)  //90  - 소수점 이하 반올림
+Math.random()     //0부터 1보다 작은 난수 발생 - 0.278....
+*/

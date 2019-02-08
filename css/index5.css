@@ -3,4 +3,4 @@
 .wrap {width:100%; margin:auto; max-width:1200px;}
 #box1 {width:200px; height:200px; background-color:#f00; 
   border:10px solid #f60;}
-
+.eq {margin-left:300px; margin-top:100px; border:10px solid #ccc;}
