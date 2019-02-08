@@ -1,20 +1,19 @@
 // var : ES5
 // let : ES6
-const log = console.log;
 var Man = {
   weight: 75,
   height: 175,
   name: "홍길동",
   gender: "M",
   run: function(){
-    log("뛴다");
+    console.log("뛴다");
   },
   eat: function(){
-    log("먹는다");
+    console.log("먹는다");
   }
 };
 Man.name = "홍길순";
-log(Man.name);
+console.log(Man.name);
 Man.run();
 Man.eat();
 
@@ -23,7 +22,7 @@ var Human = (function(){
     this.name = name;
   }
   Human.prototype.eat = function(food){
-    log(this.name + "이(가) "+ food + "을(를) 먹습니다.");
+    console.log(this.name + "이(가) "+ food + "을(를) 먹습니다.");
   }
   return Human;
 }());
@@ -41,13 +40,13 @@ class Human {
 */
 
 var hong = new Human("홍길동");
-log(hong);
-log(hong.name);
+console.log(hong);
+console.log(hong.name);
 hong.eat("양꼬치");
 
 var kilsun = new Human("홍길순");
-log(kilsun);
-log(kilsun.name);
+console.log(kilsun);
+console.log(kilsun.name);
 kilsun.eat("회");
 
 /*
@@ -80,3 +79,43 @@ $("#music > li").each(function(){
     li.css({"height":per+"%"});
   }, 100);
 });
+
+var Equalizer = (function(){
+  function Equalizer(parent, bgColor, size){
+    var obj = this;
+    var html = '<ul>';
+    for(var i=1; i<=5; i++) html += '<li></li>';
+    html += '</ul>';
+    this.parent = $(parent);
+    this.bgColor = bgColor;
+    this.size = size;
+    this.parent.append(html);
+    this.ul = this.parent.children("ul");
+    this.li = this.ul.children("li");
+    this.ul.css({
+      "width":this.size+"px",
+      "height":this.size+"px",
+      "position":"relative",
+    });
+    this.li.css({
+      "background-color":this.bgColor, 
+      "width":"20%",
+      "height":"20%",
+      "position":"absolute",
+      "bottom":"0"
+    });
+    //this.li[0].style.backgroundColor = this.bgColor;
+  }
+  return Equalizer;
+}());
+
+
+var eq = new Equalizer($(".eq"), "#f90", 200);
+
+{/* <ul id="music" class="clear">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul> */}
