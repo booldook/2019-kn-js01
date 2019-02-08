@@ -11,6 +11,57 @@
  *
  * Date: 2018-01-20T17:24Z
  */
+/*
+<div class="div">
+	<ul class="ul">
+		<- prepend
+		<li class="li">1</li>
+		<li class="li">2</li>
+		<li class="li">3</li>
+		<li class="li">4</li>
+		<- append
+	</ul>
+</div>
+1. selector(선택자) 
+- $(".div")
+- $(".div").children(".ul"); 					//ul - 자식선택자
+- $(".div").children(".li");					//undefined
+- $(".div").find(".li");							//li - 자손선택자
+- $(".li").eq(2);											//<li class="li">3</li>
+- $(".li").eq(2).next();							//<li class="li">4</li>
+- $(".li").eq(2).prev();							//<li class="li">2</li>
+- $(".li").eq(2).parent();						//<ul class="ul">
+- $(".li").eq(2).parent().parent();		//<div class="div">
+$(".li").click(function(){
+	var n = $(this).index();
+});
+$(".li").each(function(i){
+	console.log(i);
+});
+
+2. DOM(Document Object Model)
+var div = $(".div");
+- $().append('<div></div>');
+- $().append(div);
+- $('<div></div>').appendTo();
+- $(div).appendTo();
+- append(), appendTo(), prepend(), prependTo() : Insert
+- $(".div").html('<div></div>') : Update - innerHTML과 같다. 
+	=> <div class="div"><div></div></div>
+- $(".div").empty() : Delete 
+	=> <div class="div"></div>
+- $(".div").remove() : Delete
+	=> .div 자체를 삭제한다.
+- var ul = $(".ul").clone(); ctrl+c
+	$(".div").append(ul);	ctrl+v;
+
+3. Animation
+- 실습 index6.js 참조
+
+4. Ajax
+- 실습 index7.js 참조
+*/
+
 ( function( global, factory ) {
 
 	"use strict";
